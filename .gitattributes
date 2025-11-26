@@ -1,0 +1,105 @@
+# ==================== Auto detect text files and normalize line endings ====================
+* text=auto
+
+# ==================== Documents ====================
+*.md text eol=lf
+*.txt text eol=lf
+*.rst text eol=lf
+README* text eol=lf
+LICENSE text eol=lf
+
+# ==================== Source Code ====================
+*.c text eol=lf
+*.cpp text eol=lf
+*.h text eol=lf
+*.hpp text eol=lf
+*.ino text eol=lf
+*.c++ text eol=lf
+*.cc text eol=lf
+*.cxx text eol=lf
+
+# ==================== Configuration Files ====================
+*.ini text eol=lf
+*.cfg text eol=lf
+*.conf text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+platformio.ini text eol=lf
+
+# ==================== Build Scripts ====================
+Makefile text eol=lf
+CMakeLists.txt text eol=lf
+*.mk text eol=lf
+*.sh text eol=lf
+*.bash text eol=lf
+
+# ==================== Linker Scripts ====================
+*.ld text eol=lf
+*.ldscript text eol=lf
+
+# ==================== Binary Files ====================
+*.o binary
+*.a binary
+*.so binary
+*.exe binary
+*.dll binary
+*.dylib binary
+*.bin binary
+*.hex binary
+*.elf binary
+*.axf binary
+
+# ==================== Archives ====================
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+
+# ==================== Images ====================
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.bmp binary
+*.svg text eol=lf
+
+# ==================== Fonts ====================
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# ==================== VS Code Settings ====================
+.vscode/** export-ignore
+.vscode/settings.json text eol=lf
+.vscode/launch.json text eol=lf
+.vscode/tasks.json text eol=lf
+
+# ==================== STM32 Specific ====================
+*.ld text eol=lf
+*.s text eol=lf
+*.S text eol=lf
+*.eml text eol=lf
+*.ioc text eol=lf
+
+# ==================== PlatformIO ====================
+.pio/** export-ignore
+.pioenvs/** export-ignore
+.piolibdeps/** export-ignore
+.platformio/** export-ignore
+
+# ==================== Debug Files ====================
+*.gdb text eol=lf
+*.gdbinit text eol=lf
+
+# ==================== Documentation Generated Files ====================
+# Keep source docs, ignore generated
+html/** export-ignore
+latex/** export-ignore
+doxygen/** export-ignore
