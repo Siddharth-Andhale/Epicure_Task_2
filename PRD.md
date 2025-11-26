@@ -166,13 +166,13 @@ device/stm32/status
 
 ## 10. Verification Criteria
 
-- [ ] UART transmits "IM ON\r\n" exactly every 1 second
-- [ ] LED toggles every 5 seconds (timing ratio 5:1 verified)
-- [ ] No blocking code in main loop
-- [ ] All interrupts trigger at precise intervals
-- [ ] ESP receives UART data and publishes to MQTT with timestamp
-- [ ] MQTT payload contains correct JSON format
-- [ ] System operates indefinitely without drift
+- UART transmits "IM ON\r\n" exactly every 1 second
+- LED toggles every 5 seconds (timing ratio 5:1 verified)
+- No blocking code in main loop
+- All interrupts trigger at precise intervals
+- ESP receives UART data and publishes to MQTT with timestamp
+- MQTT payload contains correct JSON format
+- System operates indefinitely without drift
 
 ---
 
@@ -195,30 +195,30 @@ device/stm32/status
 ## 12. Development Phases
 
 ### Phase 1: Timer & Interrupt Setup
-- [ ] Configure TIM2 for 1-second interrupt
-- [ ] Configure TIM3 for 5-second interrupt
-- [ ] Verify interrupt triggering
+- Configure TIM2 for 1-second interrupt
+- Configure TIM3 for 5-second interrupt
+- Verify interrupt triggering
 
 ### Phase 2: UART Implementation
-- [ ] Initialize USART1
-- [ ] Implement interrupt-driven UART TX
-- [ ] Transmit "IM ON\r\n" in TIM2 ISR
+- Initialize USART1
+- Implement interrupt-driven UART TX
+- Transmit "IM ON\r\n" in TIM2 ISR
 
 ### Phase 3: LED Control
-- [ ] Initialize GPIO PD12
-- [ ] Toggle LED in TIM3 ISR
-- [ ] Verify 5-second toggle pattern
+- Initialize GPIO PD12
+- Toggle LED in TIM3 ISR
+- Verify 5-second toggle pattern
 
 ### Phase 4: ESP Integration
-- [ ] Implement UART RX on ESP
-- [ ] Parse received messages
-- [ ] Add NTP time synchronization
-- [ ] Publish to MQTT broker
+- Implement UART RX on ESP
+- Parse received messages
+- Add NTP time synchronization
+- Publish to MQTT broker
 
 ### Phase 5: Testing & Verification
-- [ ] Validate timing ratios
-- [ ] Monitor MQTT messages
-- [ ] Check for timing drift over extended periods
+- Validate timing ratios
+- Monitor MQTT messages
+- Check for timing drift over extended periods
 
 ---
 
@@ -254,12 +254,12 @@ device/stm32/status
 
 ## 15. Success Criteria
 
-✓ System operates continuously without blocking  
-✓ UART messages transmitted at precise 1-second intervals  
-✓ LED toggle verified every 5 seconds (5:1 ratio confirmed)  
-✓ MQTT broker receives timestamped JSON messages  
-✓ Zero timing drift over 24-hour test period  
-✓ All code is interrupt-driven, non-blocking  
+- System operates continuously without blocking
+- UART messages transmitted at precise 1-second intervals
+- LED toggle verified every 5 seconds (5:1 ratio confirmed)
+- MQTT broker receives timestamped JSON messages
+- Zero timing drift over 24-hour test period
+- All code is interrupt-driven, non-blocking  
 
 ---
 

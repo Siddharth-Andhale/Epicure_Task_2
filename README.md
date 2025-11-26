@@ -2,7 +2,7 @@
 
 A complete embedded systems project implementing a **non-blocking, fully interrupt-driven system** with UART communication, GPIO LED control, and MQTT cloud logging via ESP32.
 
-## 📋 Project Overview
+## Project Overview
 
 This project combines:
 - **STM32F407VET6**: Microcontroller with hardware timer-based UART transmission and LED control
@@ -10,16 +10,16 @@ This project combines:
 - **HiveMQ Cloud**: MQTT broker for real-time data transmission
 
 ### Key Features
-✅ Non-blocking UART transmission (1 message per second)  
-✅ Interrupt-driven LED toggling (every 5 seconds)  
-✅ NTP time synchronization for accurate timestamps  
-✅ JSON-formatted MQTT payloads  
-✅ TLS/SSL encrypted MQTT connection  
-✅ Deterministic timing (5:1 ratio verification)  
+- Non-blocking UART transmission (1 message per second)
+- Interrupt-driven LED toggling (every 5 seconds)
+- NTP time synchronization for accurate timestamps
+- JSON-formatted MQTT payloads
+- TLS/SSL encrypted MQTT connection
+- Deterministic timing (5:1 ratio verification)  
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Epicure Task 2/
@@ -53,7 +53,7 @@ Epicure Task 2/
 
 ---
 
-## 🔌 Hardware Requirements
+## Hardware Requirements
 
 ### Microcontroller
 - **STM32F407VET6** (ARM Cortex-M4, 84MHz, 192KB RAM, 512KB Flash)
@@ -71,7 +71,7 @@ Epicure Task 2/
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### STM32 Setup (STM32CubeIDE)
 - **TIM2**: 32-bit timer, 1-second period, generates UART TX interrupt
@@ -99,7 +99,7 @@ Edit `ESP UART Reciever and MQTT Pub/include/config.h`:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Building STM32 Project
 ```bash
@@ -125,7 +125,7 @@ platformio device monitor -b 115200
 
 ---
 
-## 📊 Data Flow
+## Data Flow
 
 ```
 STM32F407VET6 (PA9 UART TX)
@@ -151,7 +151,7 @@ JSON Message:
 
 ---
 
-## 📈 Expected Output (ESP32 Serial Monitor)
+## Expected Output (ESP32 Serial Monitor)
 
 ```
 [ESP32] ========================================
@@ -171,7 +171,7 @@ JSON Message:
 
 ---
 
-## 🔍 Verification
+## Verification
 
 ### Monitor MQTT Topic
 ```bash
@@ -193,7 +193,7 @@ mosquitto_sub -h af31a5fa47f74486be18c7a448f04ae4.s1.eu.hivemq.cloud \
 
 ---
 
-## 🔒 Security Notes
+## Security Notes
 
 - **TLS/SSL enabled** on port 8883 (not 1883)
 - **Root CA certificate** included in config.h (ISRG Root X1)
@@ -202,7 +202,7 @@ mosquitto_sub -h af31a5fa47f74486be18c7a448f04ae4.s1.eu.hivemq.cloud \
 
 ---
 
-## 📝 Technical Specifications
+## Technical Specifications
 
 | Parameter | STM32 | ESP32 |
 |-----------|-------|-------|
@@ -216,7 +216,7 @@ mosquitto_sub -h af31a5fa47f74486be18c7a448f04ae4.s1.eu.hivemq.cloud \
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### ESP32 WiFi Issues
 - Verify SSID and password in `config.h`
@@ -239,37 +239,6 @@ mosquitto_sub -h af31a5fa47f74486be18c7a448f04ae4.s1.eu.hivemq.cloud \
 - Verify crystal/clock settings on STM32
 - Use oscilloscope to measure actual frequencies
 - Check for ISR conflicts
-
----
-
-## 📚 Documentation
-
-- **PRD.md**: Complete project requirements and specifications
-- **Timer Delay Task/README**: STM32 specific documentation
-- **ESP UART Reciever and MQTT Pub/README**: ESP32 specific documentation
-
----
-
-## 📄 License
-
-This project is provided as-is for educational and commercial use.
-
----
-
-## 👥 Contributors
-
-- **Project**: Epicure Robotics Task 2
-- **Date**: November 2025
-- **Platform**: STM32F407VET6 + ESP32
-
----
-
-## 📞 Support
-
-For issues, questions, or improvements, refer to:
-- PRD.md for technical specifications
-- Individual project README files
-- Hardware datasheets (STM32F407, ESP32)
 
 ---
 
