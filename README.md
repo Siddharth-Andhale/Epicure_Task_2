@@ -23,7 +23,7 @@ This project combines:
 
 ```
 Epicure Task 2/
-├── Timer Delay Task/                      # STM32CubeIDE Project
+├── STM_Timer_Delay_Task/                  # STM32CubeIDE Project
 │   ├── Core/
 │   │   ├── Inc/
 │   │   │   ├── main.h
@@ -105,7 +105,7 @@ Edit `ESP UART Reciever and MQTT Pub/include/config.h`:
 ```bash
 # Open in STM32CubeIDE
 # Or build via command line:
-cd "Timer Delay Task"
+cd "STM_Timer_Delay_Task"
 arm-none-eabi-gcc -c core/src/main.c ...
 ```
 
